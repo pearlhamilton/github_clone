@@ -16,6 +16,7 @@ const Home = () => {
             setError();
         } catch (err) {
             console.warn(err);
+            setRepos()
             setError("User Does not Exist");
         }
     }

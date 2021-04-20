@@ -2,7 +2,6 @@ import React, {useState} from 'react'
 
 const SearchForm = ({searchForUser}) => {
 
- 
 
     const [username, setUsername ] = useState("")
 

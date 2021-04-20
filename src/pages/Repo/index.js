@@ -6,7 +6,7 @@ const Repo = () => {
   return (
     <div className="repo-individual">
       <Switch>
-        <Route path={"repo/:id"}>
+        <Route path={"/repo/:id"}>
           <RepoInfo/>
         </Route>
       </Switch>

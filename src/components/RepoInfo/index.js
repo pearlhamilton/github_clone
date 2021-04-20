@@ -57,7 +57,7 @@ const RepoInfo = () => {
         </div>
       </div>
 
-      : <h5>Error, no repo found</h5>
+      : <h1 className="text-center">Error, no repo found</h1>
     }
     </>
   )

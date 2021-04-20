@@ -1,0 +1,24 @@
+.repo-info img {
+  width: 200px;
+}
+
+.repo-header {
+  border: 1px solid #30363d;
+}
+
+body {
+  background-color: #0d1117;
+  color: #8b949e;
+}
+
+.repo-stats {
+  margin: 5px 15px;
+}
+
+.repo-stats h5 {
+  margin-top: 10px;
+}
+
+.repo-stat {
+  border: 1px solid #30363d;
+}

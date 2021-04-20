@@ -4,7 +4,7 @@ import { RepoInfo } from '../../components'
 
 const Repo = () => {
   return (
-    <div className="repo-individual">
+    <div className="repo-individual container">
       <Switch>
         <Route path={"/repo/:id"}>
           <RepoInfo/>

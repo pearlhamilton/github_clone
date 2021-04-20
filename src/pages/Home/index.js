@@ -1,24 +1,33 @@
-import React from 'react' 
+import React, {useState} from 'react' 
 import { SearchForm } from '../../components'
 import axios from 'axios'
+import RepoItem from '../../components/RepoItem'
 
 const Home = () => {
+
+    const [repos, setRepos] = useState()
 
     const searchForUser = async (username) => {
         try {   
             let { data } = await axios.get(`https://api.github.com/users/${username}/repos`);
-            console.log(data)
+            setRepos(data)
+
+
         } catch (err) {
             console.warn(err);
          
         }
     }
+    console.log(repos)
 
+
+    
+    
     return(
         <>
         <h1>Github Clone</h1>
         <SearchForm searchForUser={searchForUser}/>
-
+        {repos ? repos.map(repo => <RepoItem key={repo.id} repoData ={repo}/>): ""}
         </>
     )
 

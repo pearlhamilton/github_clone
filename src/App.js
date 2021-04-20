@@ -12,9 +12,6 @@ function App() {
         <Route path="/repo">
           <Repo/>
         </Route>
-        <Route path="/test">
-          <h1>Test</h1>
-        </Route>
       </Switch>
     </>
   );

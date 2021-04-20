@@ -21,8 +21,14 @@ const SearchForm = ({searchForUser}) => {
     
     return (
     <form role="form" onSubmit={handleSubmit}>
-        <input type="text" onChange={updateInput}/>
-        <input type="submit" value="Find Repos" />
+        <div className="form-row">
+            <div className="col-sm-8">
+                <input type="text" className="form-control" onChange={updateInput}/>
+            </div>
+            <div className="col-sm-4">
+                <input type="submit" className="form-control" value="Find Repos" />
+            </div>
+        </div>
     </form>
     )
 }

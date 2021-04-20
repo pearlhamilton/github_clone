@@ -23,14 +23,14 @@ const Home = () => {
     }
 
     return(
-        <>
-        <h1>Github Clone</h1>
-        <SearchForm searchForUser={searchForUser}/>
-        {repos ? <Profile  repoData={repos[0]}/> : "" }
-        <div id="repoResults">
-        {repos ? repos.map(repo => <RepoItem key={repo.id} repoData ={repo}/>) : ""}
+        <div className="container">
+            <h1 className="text-center">Github Clone</h1>
+            <SearchForm searchForUser={searchForUser}/>
+            {repos ? <Profile  repoData={repos[0]}/> : "" }
+            <div id="repoResults">
+                {repos ? repos.map(repo => <RepoItem key={repo.id} repoData ={repo}/>) : ""}
+            </div>
         </div>
-        </>
     )
 
 

@@ -1,0 +1,11 @@
+.back-button {
+  background-color: #0d1117;
+  color: #1f6feb;
+  border: 1px solid #30363d;
+  margin: 10px 0;
+}
+
+.back-button:hover {
+  color: #1f6feb;
+  text-decoration: underline;
+}

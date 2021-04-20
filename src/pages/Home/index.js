@@ -7,13 +7,16 @@ import './style.css'
 const Home = () => {
 
     const [repos, setRepos] = useState()
+    const [error, setError] = useState()
 
     const searchForUser = async (username) => {
         try {   
             let { data } = await axios.get(`https://api.github.com/users/${username}/repos`);
             setRepos(data)
+            setError();
         } catch (err) {
             console.warn(err);
+            setError("User Does not Exist");
         }
     }
     
@@ -26,14 +29,16 @@ const Home = () => {
         <div className="container">
             <h1 className="text-center">Github Clone</h1>
             <SearchForm searchForUser={searchForUser}/>
-            <div className="row">
-                <div className="col-sm-3 text-center mt-5">
-                    {repos ? <Profile  repoData={repos[0]}/> : "" }
+            { error ? <p>{error}</p> :
+                <div className="row">
+                    <div className="col-sm-3 text-center mt-5">
+                        {repos ? <Profile  repoData={repos[0]}/> : "" }
+                    </div>
+                    <div className="col-sm-9 mt-5">
+                        {repos ? repos.map(repo => <RepoItem key={repo.id} repoData ={repo}/>) : ""}
+                    </div>
                 </div>
-                <div className="col-sm-9 mt-5">
-                    {repos ? repos.map(repo => <RepoItem key={repo.id} repoData ={repo}/>) : ""}
-                </div>
-            </div>
+            }
         </div>
     )
 

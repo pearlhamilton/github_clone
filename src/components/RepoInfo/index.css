@@ -4,6 +4,16 @@
 
 .repo-header {
   border: 1px solid #30363d;
+  padding: 10px;
+}
+
+.repo-header a {
+  font-size: 2rem;
+  color: #1f6feb;
+}
+
+.repo-header a:hover {
+  color: #1f6feb;
 }
 
 body {

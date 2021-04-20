@@ -1,7 +1,8 @@
 import React, {useState} from 'react' 
-import { SearchForm } from '../../components'
+import { SearchForm, Profile } from '../../components'
 import axios from 'axios'
 import RepoItem from '../../components/RepoItem'
+import './style.css'
 
 const Home = () => {
 
@@ -27,7 +28,10 @@ const Home = () => {
         <>
         <h1>Github Clone</h1>
         <SearchForm searchForUser={searchForUser}/>
+        {repos? <Profile  props={repos[0]}/>: "" }
+        <div id="repoResults">
         {repos ? repos.map(repo => <RepoItem key={repo.id} repoData ={repo}/>): ""}
+        </div>
         </>
     )
 

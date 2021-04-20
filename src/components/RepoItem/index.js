@@ -1,12 +1,13 @@
 import React from 'react'
 
+import './style.css'
+
 const RepoItem = ({repoData}) => {
 
 
     return(
-        <div>
-        <div>Name:{repoData.name}</div>
-        <p>Description: {repoData.description}</p>
+        <div className="repoItem">
+        <div className="repoName">{repoData.name}</div>
         </div>
 
     )

@@ -26,9 +26,13 @@ const Home = () => {
         <div className="container">
             <h1 className="text-center">Github Clone</h1>
             <SearchForm searchForUser={searchForUser}/>
-            {repos ? <Profile  repoData={repos[0]}/> : "" }
-            <div id="repoResults">
-                {repos ? repos.map(repo => <RepoItem key={repo.id} repoData ={repo}/>) : ""}
+            <div className="row">
+                <div className="col-sm-3 text-center mt-5">
+                    {repos ? <Profile  repoData={repos[0]}/> : "" }
+                </div>
+                <div className="col-sm-9 mt-5">
+                    {repos ? repos.map(repo => <RepoItem key={repo.id} repoData ={repo}/>) : ""}
+                </div>
             </div>
         </div>
     )

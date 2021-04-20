@@ -1,13 +1,29 @@
 .repoItem{
- 
     border-bottom: 1px black solid;
-    width: 50%;
     margin: 20px;
     font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
-    height:50px
 }
 
-.repoName{
-    color:blue;
+.repoItem p {
+    margin: 0;
+    padding: 0;
+}
+
+.repoItem a {
+    background-color: #21262d;
+    border: 1px solid #30363d;
+    margin: 0;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.repoName {
+    color: #1f6feb;
     font-size:20px
+}
+
+.repoLanguage {
+    margin-top: 10px !important;
+    margin-bottom: 5px !important;
+    font-size: 0.8rem;
 }

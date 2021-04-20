@@ -2,7 +2,7 @@ import React from 'react'
 
 import './style.css'
 
-const RepoItem = ({props}) => {
+const RepoItem = (props) => {
 
 
     return(

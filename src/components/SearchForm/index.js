@@ -3,10 +3,12 @@ import React, {useState} from 'react'
 const SearchForm = ({searchForUser}) => {
 
 
-    const [username, setUsername ] = useState("")
+    const [username, setUsername ] = useState();
 
     function handleSubmit(e){
         e.preventDefault()
+        const input = e.target[0].value;
+        setUsername(input)
         searchForUser(username)
     }
 
@@ -18,12 +20,10 @@ const SearchForm = ({searchForUser}) => {
 
     
     return (
-
-        <form role="form" onSubmit={handleSubmit}>
+    <form role="form" onSubmit={handleSubmit}>
         <input type="text" onChange={updateInput}/>
         <input type="submit" value="Find Repos" />
     </form>
-
     )
 }
 

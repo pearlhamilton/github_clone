@@ -2,6 +2,8 @@
 
 ## By Aaron & Pearl
 
+You can view our live site: [https://agithubclone.netlify.app/](https://agithubclone.netlify.app/)
+
 ## Installation 
 If you wish to run it locally, or run tests then do the following:
 1. Clone this repo (from main)

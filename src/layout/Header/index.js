@@ -10,7 +10,7 @@ import './style.css'
 const Header = () => {
   return (
         <header>
-            <img src={logo}></img>
+            <img src={logo} alt="github logo"></img>
         </header>
 
   );

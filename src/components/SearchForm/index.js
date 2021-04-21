@@ -18,7 +18,7 @@ const SearchForm = ({searchForUser}) => {
 
     
     return (
-    <form role="form" onSubmit={handleSubmit}>
+    <form aria-label="search" onSubmit={handleSubmit}>
         <div className="form-row">
             <div className="col-sm-8">
                 <input type="text" className="form-control" placeholder="Enter username..." value={username} onChange={updateInput}/>

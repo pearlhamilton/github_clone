@@ -24,7 +24,7 @@ describe('SearchForm', () => {
         userEvent.submit(form)
         expect(handleSubmit).toHaveBeenCalledTimes(1)
 
-    // need to work on this 
+    // need to work on this
 
     })
 })

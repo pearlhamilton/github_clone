@@ -1,5 +1,6 @@
 import React, {useState} from 'react' 
 import { SearchForm, Profile } from '../../components'
+import { Header } from '../../layout'
 import axios from 'axios'
 import RepoItem from '../../components/RepoItem'
 import './style.css'
@@ -27,8 +28,10 @@ const Home = () => {
     }
 
     return(
+        <>
+          <Header/>
         <div className="container">
-            <h1 className="text-center">Github Clone</h1>
+            <h1 className="text-center">Github</h1>
             <SearchForm searchForUser={searchForUser}/>
             { error ? <p>{error}</p> :
                 <div className="row">
@@ -41,6 +44,7 @@ const Home = () => {
                 </div>
             }
         </div>
+        </>
     )
 
 

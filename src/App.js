@@ -11,7 +11,7 @@ function App() {
           <BackButton/>
           <Home/>
         </Route>
-        <Route path="/repo">
+        <Route path={"/repo/:id"}>
           <BackButton/>
           <Repo/>
         </Route>

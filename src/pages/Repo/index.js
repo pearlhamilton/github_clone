@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import { RepoInfo } from '../../components'
+import { Header } from '../../layout'
 
 const Repo = () => {
   const [repo, setRepo] = useState();
@@ -23,6 +24,7 @@ const Repo = () => {
 
   return (
     <main aria-label="main" className="repo-individual container">
+      <Header/>
       <RepoInfo repo={repo}/>
     </main>
   );

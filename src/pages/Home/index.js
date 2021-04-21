@@ -29,7 +29,7 @@ const Home = () => {
 
     return(
         <>
-          <Header/>
+        <Header/>
         <div className="container">
             <h1 className="text-center">Github</h1>
             <SearchForm searchForUser={searchForUser}/>

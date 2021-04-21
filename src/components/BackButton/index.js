@@ -6,7 +6,7 @@ const BackButton = () => {
   const history = useHistory();
 
   return (
-    <div className="container">
+    <div className="ml-5">
       <button className="back-button" onClick={history.goBack}>Back</button>
     </div>
   )

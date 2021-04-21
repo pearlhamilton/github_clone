@@ -5,7 +5,6 @@ import { RepoInfo, BackButton } from '../../components'
 const Repo = () => {
   return (
     <main aria-label="main" className="repo-individual container">
-      <BackButton/>
       <Switch>
         <Route path={"/repo/:id"}>
           <RepoInfo/>

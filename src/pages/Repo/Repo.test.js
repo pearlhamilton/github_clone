@@ -1,7 +1,7 @@
-import { screen } from '@testing-library/react';
+import { screen, render } from '@testing-library/react';
 import Repo from '.';
 
-describe('About', () => {
+describe('Repo', () => {
   beforeEach(() => {
     render(<Repo />);
   })

@@ -39,15 +39,15 @@ const RepoInfo = () => {
           <div className="row">
             <div className="col-sm repo-stat">
               <h5>Forks</h5>
-              <p>{repo.forks ? repo.forks : "Unkown"}</p>
+              <p>{repo.forks}</p>
             </div>
             <div className="col-sm repo-stat">
               <h5>Open Issues</h5>
-              <p>{repo.open_issues ? repo.open_issues : "Unkown"}</p>
+              <p>{repo.open_issues}</p>
             </div>
             <div className="col-sm repo-stat">
               <h5>Watchers</h5>
-              <p>{repo.watchers ? repo.watchers : "Unkown"}</p>
+              <p>{repo.watchers}</p>
             </div>
             <div className="col-sm repo-stat">
               <h5>Subscribers</h5>

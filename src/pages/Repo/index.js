@@ -4,14 +4,14 @@ import { RepoInfo, BackButton } from '../../components'
 
 const Repo = () => {
   return (
-    <div className="repo-individual container">
+    <main aria-label="main" className="repo-individual container">
       <BackButton/>
       <Switch>
         <Route path={"/repo/:id"}>
           <RepoInfo/>
         </Route>
       </Switch>
-    </div>
+    </main>
   );
 }
 

@@ -24,7 +24,7 @@ const SearchForm = ({searchForUser}) => {
                 <input type="text" className="form-control" placeholder="Enter username..." value={username} onChange={updateInput}/>
             </div>
             <div className="col-sm-4">
-                <input type="submit" className="form-control" value="Find Repos" />
+                <input role="button" type="submit" className="form-control" value="Find Repos" />
             </div>
         </div>
     </form>

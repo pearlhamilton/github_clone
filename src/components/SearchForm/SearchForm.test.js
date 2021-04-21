@@ -3,7 +3,8 @@ import SearchForm from '.';
 
 
 describe('SearchForm', () => {
-    beforeEach(() => render(<SearchForm/>))
+    const mockFunc = jest.fn();
+    beforeEach(() => render(<SearchForm searchForUser={mockFunc}/>))
     
     test('it renders a button', () => {
         expect(screen.getByRole('button')).toBeInTheDocument()
@@ -19,12 +20,9 @@ describe('SearchForm', () => {
     
     test('it triggers handle submit on submit', () => {
 
-        const handleSubmit = jest.fn()
-        const form= screen.getByRole('form')
-        userEvent.submit(form)
-        expect(handleSubmit).toHaveBeenCalledTimes(1)
-
-    // need to work on this
+        const submitButton = screen.getByRole('button');
+        userEvent.click(submitButton);
+        expect(mockFunc).toHaveBeenCalledTimes(1);
 
     })
 })
